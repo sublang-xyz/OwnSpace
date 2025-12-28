@@ -23,15 +23,14 @@ Designing a minimal MCP interface for text file content management optimized for
 
 ### Interface
 
-```text
-file.create   (path, content, encoding)           → {hash}
-file.remove   (path, hash)                        → {}
-
-text.read     (path, lines?)                      → {content, hash, total_lines}
-text.replace  (path, hash, lines, old, new)       → {hash, total_lines}
-text.insert   (path, hash, line, anchor, content) → {hash, total_lines}
-text.append   (path, hash, content)               → {hash, total_lines}
-```
+| Tool           | Parameters                                  | Returns                            |
+|----------------|---------------------------------------------|------------------------------------|
+| `file.create`  | `path`, `content`, `encoding`               | `hash`                             |
+| `file.remove`  | `path`, `hash`                              | —                                  |
+| `text.read`    | `path`, `lines`?                            | `content`, `hash`, `total_lines`   |
+| `text.replace` | `path`, `hash`, `lines`, `old`, `new`       | `hash`, `total_lines`              |
+| `text.insert`  | `path`, `hash`, `line`, `anchor`, `content` | `hash`, `total_lines`              |
+| `text.append`  | `path`, `hash`, `content`                   | `hash`, `total_lines`              |
 
 ### Design Principles
 
