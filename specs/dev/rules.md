@@ -11,3 +11,8 @@ This document is **internal** (repository contribution rules).
 - Body: explain **what/why** (not how); wrap at 72 chars; use bullets if clearer.
 - Co-authorship: add trailer if AI-assisted.
 - Signing: required.
+
+## Spec Item Format
+
+- Each spec item shall be self-contained and not rely on section headers for context.
+- Item IDs shall not be modified once assigned; new items shall use higher IDs.
