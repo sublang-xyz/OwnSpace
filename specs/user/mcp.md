@@ -51,7 +51,7 @@ This document is **user-facing** for MCP clients/agents integrating with RootSpa
 
 ## Line Indexing
 
-- [MCP-040] `lines` shall use Python-style indexing: `[start, end)` with end exclusive, 1-indexed.
+- [MCP-040] `lines` shall be a two-element array `[start, end]` with end exclusive, 1-indexed.
 - [MCP-041] Negative indices shall be supported.
 - [MCP-042] `0` shall indicate open-ended range.
 

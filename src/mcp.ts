@@ -83,7 +83,7 @@ function registerTextTools(server: McpServer): void {
     description: 'Read text content from a file',
     inputSchema: {
       path: z.string().describe('Path to the file to read'),
-      lines: z.string().optional().describe('Line range in Python-style indexing [start, end)'),
+      lines: z.tuple([z.number(), z.number()]).optional().describe('Line range as [start, end), 1-indexed, end exclusive'),
     },
   }, async () => {
     // Skeleton - not implemented yet
@@ -99,7 +99,7 @@ function registerTextTools(server: McpServer): void {
     inputSchema: {
       path: z.string().describe('Path to the file'),
       hash: z.string().describe('SHA-256 hash of current content for verification'),
-      lines: z.string().describe('Line range in Python-style indexing [start, end)'),
+      lines: z.tuple([z.number(), z.number()]).describe('Line range as [start, end), 1-indexed, end exclusive'),
       old: z.string().describe('Full content of consecutive lines to replace'),
       new: z.string().describe('New content to replace with'),
     },
