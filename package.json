@@ -4,9 +4,6 @@
   "description": "User-owned knowledge space — one source, your control, zero fragmentation",
   "type": "module",
   "main": "dist/index.js",
-  "bin": {
-    "rootspace": "dist/cli.js"
-  },
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",

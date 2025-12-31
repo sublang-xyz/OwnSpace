@@ -51,22 +51,20 @@ export function createHttpServer(config: Config): ServerInstance {
 
   const stop = (): Promise<void> => {
     return new Promise((resolve) => {
-      // Stop accepting new connections
+      // Stop accepting new connections; callback fires when all connections close
       server.close(() => {
         resolve();
       });
 
-      // Close existing connections gracefully
-      for (const socket of connections) {
-        socket.end();
-      }
-
-      // Force close after timeout
-      setTimeout(() => {
+      // Force-destroy connections that haven't closed after timeout
+      const forceCloseTimeout = setTimeout(() => {
         for (const socket of connections) {
           socket.destroy();
         }
       }, 5000);
+
+      // Clear timeout if server closes gracefully before deadline
+      server.once('close', () => clearTimeout(forceCloseTimeout));
     });
   };
 
