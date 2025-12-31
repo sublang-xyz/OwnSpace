@@ -1,6 +1,6 @@
 # Iteration 2: MCP Protocol Foundation
 
-Ref: [ADR-0002](/docs/decisions/0002-adopt-mcp-as-the-agent-interface.md), [MCP-001], [MCP-002]
+Ref: [ADR-0002](/docs/decisions/0002-adopt-mcp-as-the-agent-interface.md), [MCP-001], [MCP-002], [MCP-005]
 
 ## Goal
 
@@ -20,10 +20,12 @@ Integrate MCP SDK and establish HTTP/SSE transport with protocol handshake.
 - [ ] Initialize MCP server instance
 - [ ] Configure server metadata (name, version, capabilities)
 
-### 2.2 HTTP/SSE Transport (Ref: [MCP-002])
+### 2.2 HTTP/SSE Transport (Ref: [MCP-002], [MCP-005])
 
 - [ ] Implement SSE endpoint for server-to-client messages
 - [ ] Implement HTTP POST endpoint for client-to-server messages
+- [ ] Assign UUID v4 session ID via `mcp-session-id` header on initialization (Ref: [MCP-005])
+- [ ] Return HTTP 404 for requests with unknown session ID (Ref: [MCP-005])
 - [ ] Handle MCP session lifecycle (connect, disconnect)
 
 ### 2.3 Tool Registration Skeleton (Ref: [MCP-003], [MCP-004])

@@ -25,6 +25,7 @@ Implement `list://` resource for directory browsing.
 ### 5.2 Directory Listing Format
 
 - [ ] Return structured list with name and type per entry
+- [ ] Include dotfiles in listing (Ref: [MCP-021])
 - [ ] Sort entries alphabetically (directories first, then files)
 - [ ] Handle empty directories
 

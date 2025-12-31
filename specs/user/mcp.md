@@ -8,6 +8,7 @@ This document is **user-facing** for MCP clients/agents integrating with RootSpa
 
 - [MCP-001] The system shall act as an MCP server exposing Tools and Resources.
 - [MCP-002] The system shall communicate via HTTP/SSE transport.
+- [MCP-005] The system shall assign a unique session ID (UUID v4) via `mcp-session-id` header on initialization and reject requests with unknown session IDs with HTTP 404.
 
 ## Namespaces
 
@@ -28,6 +29,7 @@ This document is **user-facing** for MCP clients/agents integrating with RootSpa
 ## Resources
 
 - [MCP-020] When an agent reads `list://{path}`, the system shall return immediate children of the path (non-recursive).
+- [MCP-021] The list resource shall include dotfiles (entries beginning with `.`) in the response.
 
 ## Paths
 
@@ -61,5 +63,5 @@ This document is **user-facing** for MCP clients/agents integrating with RootSpa
 ## Error Handling
 
 - [MCP-050] If a requested resource does not exist, the system shall return a not-found error.
-- [MCP-051] If the agent lacks required scope, the system shall return an unauthorized error. (Ref: [AUTH-030])
+- [MCP-051] If the agent lacks required scope, the system shall return HTTP 403 Forbidden. (Ref: [AUTH-030])
 - [MCP-052] Errors shall be instructional to guide LLM self-correction.

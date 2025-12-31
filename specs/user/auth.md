@@ -29,6 +29,6 @@ Path-based authorization:
 
 ## Access Control
 
-- [AUTH-030] The system shall deny access by default if no matching scope is present.
+- [AUTH-030] The system shall deny access by default if no matching scope is present, returning HTTP 403 Forbidden. (Ref: [MCP-051])
 - [AUTH-031] `file.create`, `text.replace`, `text.insert`, `text.append`, `file.remove` require a matching `write:` scope. (Ref: [MCP-010], [MCP-011], [MCP-013]–[MCP-015])
 - [AUTH-032] `text.read`, `list://` require a matching `read:` scope or a matching `write:` scope. (Ref: [MCP-012], [MCP-020])

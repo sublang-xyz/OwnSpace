@@ -43,7 +43,7 @@ Implement core file operations: create, remove, and read with path normalization
 - [ ] Accept `path`, `hash` parameters
 - [ ] Validate hash matches current file content (Ref: [MCP-032])
 - [ ] Remove file from filesystem
-- [ ] Return instructional error on hash mismatch (Ref: [MCP-052])
+- [ ] Return instructional error on hash mismatch indicating stale state (Ref: [MCP-034], [MCP-052])
 
 ### 3.5 text.read Tool (Ref: [MCP-012])
 
