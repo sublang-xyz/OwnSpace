@@ -5,7 +5,7 @@
 | ID | Test Case | Ref |
 |----|-----------|-----|
 | T1.1.1 | Server starts and listens on port 9999 | [DEP-001] |
-| T1.1.2 | Server creates `~/.rootspace/` directory if not exists | [DEP-002] |
+| T1.1.2 | Server creates `~/rootspace/` directory if not exists | [DEP-002] |
 | T1.1.3 | Server uses custom data directory when configured | [DEP-002] |
 
 ## T1.2 Health Check

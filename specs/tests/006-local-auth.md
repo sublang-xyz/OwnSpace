@@ -5,7 +5,7 @@
 | ID | Test Case | Ref |
 |----|-----------|-----|
 | T6.1.1 | Secret generated on first run if not exists | [AUTH-019] |
-| T6.1.2 | Secret stored in `~/.rootspace/secret.key` | [AUTH-019] |
+| T6.1.2 | Secret stored in `~/rootspace/.secret.key` | [AUTH-019] |
 | T6.1.3 | Existing secret loaded on subsequent runs | [AUTH-019] |
 
 ## T6.2 JWT Validation

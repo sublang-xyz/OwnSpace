@@ -30,7 +30,7 @@ Initialize TypeScript/Node.js project with a functional HTTP server listening on
 
 ### 1.3 Data Directory Setup (Ref: [DEP-002])
 
-- [ ] Implement `~/.rootspace/` directory creation on startup
+- [ ] Implement `~/rootspace/` directory creation on startup
 - [ ] Add configuration for custom data directory path
 
 ### 1.4 Build and Run Scripts

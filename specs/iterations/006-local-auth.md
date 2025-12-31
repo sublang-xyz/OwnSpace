@@ -18,7 +18,7 @@ Implement JWT authentication for local mode with CLI token minting.
 ### 6.1 Local Signing Secret (Ref: [AUTH-019])
 
 - [ ] Generate signing secret on first run if not exists
-- [ ] Store secret in `~/.rootspace/secret.key`
+- [ ] Store secret in `~/rootspace/.secret.key`
 - [ ] Use HS256 algorithm for local mode
 
 ### 6.2 JWT Validation (Ref: [AUTH-015], [AUTH-016], [AUTH-017])
