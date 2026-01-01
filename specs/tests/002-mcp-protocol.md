@@ -16,8 +16,8 @@
 | T2.2.2 | POST endpoint accepts JSON-RPC messages | [MCP-002] |
 | T2.2.3 | Server sends responses via SSE stream | [MCP-002] |
 | T2.2.4 | Server handles client disconnect gracefully | [MCP-002] |
-| T2.2.5 | Server assigns session ID on connect | [MCP-002] |
-| T2.2.6 | Server rejects requests with invalid session ID | [MCP-002] |
+| T2.2.5 | Server assigns UUID v4 session ID via `mcp-session-id` header | [MCP-005] |
+| T2.2.6 | Server returns HTTP 404 for unknown session ID | [MCP-005] |
 
 ## T2.3 Tool Registration
 

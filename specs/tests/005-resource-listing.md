@@ -24,4 +24,4 @@
 | T5.3.1 | Non-existent path returns not-found error | [MCP-050] |
 | T5.3.2 | Path pointing to file (not directory) returns error | [MCP-020] |
 | T5.3.3 | Empty directory returns empty list | [MCP-020] |
-| T5.3.4 | Hidden files (dotfiles) included in listing | [MCP-020] |
+| T5.3.4 | Hidden files (dotfiles) included in listing | [MCP-021] |
