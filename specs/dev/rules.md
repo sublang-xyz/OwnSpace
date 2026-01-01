@@ -1,3 +1,7 @@
+<!-- SPDX-License-Identifier: CC-BY-SA-4.0 -->
+<!-- SPDX-FileCopyrightText: 2025 SubLang contributors <https://github.com/sublang-xyz>
+-->
+
 # Rules
 
 This document is **internal** (repository contribution rules).
@@ -16,3 +20,38 @@ This document is **internal** (repository contribution rules).
 
 - Each spec item shall be self-contained and not rely on section headers for context.
 - Item IDs shall not be modified once assigned; new items shall use higher IDs.
+
+## Licensing
+
+Project uses dual licensing:
+
+- **Code** (src/, config files): AGPL-3.0-or-later
+- **Content** (specs/, docs/, README): CC-BY-SA-4.0
+
+### SPDX Headers
+
+All new files must include SPDX headers at the top:
+
+**TypeScript/JavaScript:**
+
+```typescript
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// SPDX-FileCopyrightText: 2025 SubLang contributors <https://github.com/sublang-xyz>
+```
+
+**Markdown:**
+
+```markdown
+<!-- SPDX-License-Identifier: CC-BY-SA-4.0 -->
+<!-- SPDX-FileCopyrightText: 2025 SubLang contributors <https://github.com/sublang-xyz>
+-->
+```
+
+**YAML/Shell/Config (# comments):**
+
+```yaml
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# SPDX-FileCopyrightText: 2025 SubLang contributors <https://github.com/sublang-xyz>
+```
+
+JSON files cannot carry inline comments; they inherit the code license by proximity.
